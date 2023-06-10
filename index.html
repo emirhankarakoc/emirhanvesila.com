@@ -1,43 +1,46 @@
-<h1>Emirhan Karakoc</h1>
-<h2>Hakkimda</h2>
-<p>Merhaba, ben emirhan. bilgisayar muhendisligi talebesiyim. frontend alaninda kendimi bi <strong>nebze gelistirmek icin html dersi</strong> aliyorum. kendimi gelistirmeye calisiyorum</p>
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ana Sayfa</title>
+    <link rel="stylesheet" type="text/css" href="ayar.css" />
 
-<h2>Ilgi Alanlarim</h2>
-    <p>
-        <ol>
-            <li>
-                <h3>Film</h3>
-                <ul>
-                    <li><a href="https://www.instagram.com/emirhnkarakoc" target="_blank">Hayatım</a></li>
-                    <li><a href="https://www.imdb.com/title/tt0111161/">Esaretin Bedeli</a></li>
-                    <li><a href="https://www.imdb.com/title/tt0068646/">Godfather</a></li>
-                </ul>
-            </li>
-            <li>
-                <h3>Dizi</h3>
-                <ul>
-                    <li><a href="https://www.instagram.com/emirhnkarakoc" target="_blank">Hayatım..</a></li>
-                    <li> <a href="https://www.imdb.com/title/tt0455275/"> Prison Break </a></li>
-                    <li><a href="https://www.imdb.com/title/tt2306299"> Vikings</a></li>
-                </ul>
-            </li>
-            <li>
-                <h3>Spor</h3>
-                <ul>
-                    <li><em>
-                        VÜCUT GELİŞTİRME
-                  </em> 
-                 </li>
-                    <li><strong>AMERİKAN FUTBOLU</strong></li>
-                    <li>YÜZME</li>
-                </ul>
-            </li>
-        </ol>
-    </p>
+    <style>
+        .kucult {
+            max-height: 600px;
+            max-width: 600px;
+            overflow: hidden;
+        }
+    </style>
 
+    <script type="text/javascript">
+        function getImageTag() {
+            var imageURLs = 172;
+            var randomIndex = Math.floor(Math.random() * imageURLs);
+            var img2 = document.createElement("img");
+            img2.className = "kucult";
+            if (randomIndex > 94) {
+                img2.src = "jpgler/" + randomIndex + ".JPG";
+            } else {
+                img2.src = "images/" + randomIndex + ".JPEG";
+            }
+            return img2;
+        }
 
-<a href="https://www.instagram.com/emirhnkarakoc"><h2>Canım Sevgilim ve Ben</h2></a>    
+        document.addEventListener("DOMContentLoaded", function() {
+            var container = document.getElementById("imageContainer");
+            var imgTag = getImageTag();
+            container.appendChild(imgTag);
+        });
+    </script>
+</head>
+<body>
+    <h1>Ben ve Sevgilim</h1>
+    <hr>
+    <span id="imageContainer"></span>
+    
 
-
-    <div id="silasuyun-ve-emirhan"><a href="https://www.instagram.com/emirhnkarakoc" target="_blank"> <img src="../odev2/sila.png" style="wid
-    300" height="300" alt="Canım sevgilim sıla süyün ve ben emirhan karakoç"></a></div>
+    
+</body>
+</html>
