@@ -69,6 +69,9 @@
             var randomIndex = Math.floor(Math.random() * imageURLs);
             var img2 = document.createElement("img");
             img2.className = "kucult";
+                        if(randomIndex==101 || randomIndex==107 ||randomIndex==145||randomIndex==169){
+return;
+            }
             if (randomIndex > 94) {
                 img2.src = "jpeg/" + randomIndex + ".jpeg";
             } else {
