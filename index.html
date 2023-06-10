@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ana Sayfa</title>
+    <title>Emirhan Ve Sila</title>
     <link rel="stylesheet" type="text/css" href="ayar.css" />
 
     <style>
@@ -11,10 +11,59 @@
             max-height: 600px;
             max-width: 600px;
             overflow: hidden;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 50%;
         }
+        .arkaplan{
+            background-color: black;
+        }
+        .ortala{
+            color: antiquewhite;
+            text-align: center;
+            font-size: medium;
+        }
+        h1{
+            text-align: center;
+            color: antiquewhite;
+        }
+        .butonOrtala{
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+
     </style>
 
     <script type="text/javascript">
+        var audio;
+
+        function playAudio() {
+            audio = new Audio("sas5.mp3");
+            audio.volume = 0.05;
+            audio.play();
+        }
+
+        function stopAudio() {
+            if (audio) {
+                audio.pause();
+            }
+        }
+        function resumeAudio() {
+        if (audio) {
+            audio.play();
+        }
+    }
+
+        function changeImage() {
+            var container = document.getElementById("imageContainer");
+            container.innerHTML = "";
+            var imgTag = getImageTag();
+            container.appendChild(imgTag);
+        }
+
         function getImageTag() {
             var imageURLs = 172;
             var randomIndex = Math.floor(Math.random() * imageURLs);
@@ -29,18 +78,32 @@
         }
 
         document.addEventListener("DOMContentLoaded", function() {
-            var container = document.getElementById("imageContainer");
             var imgTag = getImageTag();
+            var container = document.getElementById("imageContainer");
             container.appendChild(imgTag);
+            playAudio();
         });
     </script>
 </head>
-<body>
+<body class="arkaplan">
     <h1>Ben ve Sevgilim</h1>
-    <hr>
-    <span id="imageContainer"></span>
-    
+    <button class="butonOrtala" onclick="changeImage()">Fotoyu Değiştir - Müzik durmaz</button>
 
-    
+    <hr>
+
+    <span id="imageContainer"></span>
+    <hr>
+    <p class="ortala">Tarayıcınızın sesleri çalmasına izin verirseniz, "Sen Ona Aşıksın" parçasını da dinleyebilirsiniz.</p>
+
+        
+    <br>
+<div>
+    <button class="butonOrtala" onclick="stopAudio()">Müziği Durdur</button>
+    <br>
+    <button class="butonOrtala" onclick="resumeAudio()">Müziğe devam et</button>
+</div>
+
+    <h1><a href="https://wa.me/+905427333289" class="ortala">Benim de bundan olmalı</a></h1>
+
 </body>
 </html>
