@@ -1,2 +1,2 @@
 # ben ve manitanin foto galerisi.
-[benvesevgilim.vercel.app](https://benvesevgilim.vercel.app/)https://benvesevgilim.vercel.app/
+[benvesevgilim.vercel.app](https://benvesevgilim.vercel.app/)
